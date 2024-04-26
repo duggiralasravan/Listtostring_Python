@@ -1,0 +1,16 @@
+# Dictonary with different type of variables 
+d = {'a':1,'b':2,'c':'abc'}
+#Creating a list using the dict
+lst= [d['a'],'',d['b'],None,d['c']]
+print(lst)
+#output of the lst
+[1, '', 2, None, 'abc']
+#Without filter output of Join function
+",".join(x)
+#TypeError: sequence item 0: expected str instance, int found
+",".join(map(str,x))
+#Output - '1,,2,None,abc'  -- None and spaces are also coming in the string
+
+Excluding none and spaces from while join
+",".join(map(str,filter(None,x)))
+Ouptut -- '1,2,abc'
